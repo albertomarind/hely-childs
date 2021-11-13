@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddChildComponent } from './add-child.component';
+import { DialogMessageComponent } from './dialog-message.component';
 
-describe('AddChildComponent', () => {
-  let component: AddChildComponent;
-  let fixture: ComponentFixture<AddChildComponent>;
+describe('DialogMessageComponent', () => {
+  let component: DialogMessageComponent;
+  let fixture: ComponentFixture<DialogMessageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddChildComponent ]
+      declarations: [ DialogMessageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddChildComponent);
+    fixture = TestBed.createComponent(DialogMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

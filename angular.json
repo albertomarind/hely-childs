@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "hely-childs:build:production",
+            "firebaseProject": "hely-childs",
+            "firebaseHostingSite": "hely-childs"
+          }
         }
       }
     }

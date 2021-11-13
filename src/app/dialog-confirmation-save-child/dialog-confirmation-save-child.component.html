@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Confirmación de registro</h1>
+<div mat-dialog-content>
+  <div class="container-confirmation">
+    <label>Niño:</label> <span>{{child.nombreNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Edad:</label> <span>{{child.edadNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Padre o tutor:</label> <span>{{child.nombrePadreTutor}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Teléfono:</label><span> {{child.telefonoPadreTutor}}</span>
+  </div>
+  <ng-container *ngIf="child.padAlergiaEnfermedad">
+    <div class="container-confirmation">
+      <div>
+        <label>Usted indicó que el niño padece alguna enfermedad o alergia y escribió la siguiente descripción:</label>
+      </div>
+      <div>
+        <span class="resalta">
+          {{child.descAlergiaEnfermedad}}
+        </span>
+      </div>
+    </div>
+  </ng-container>
+  <div class="container-confirmation" *ngIf="child.autActividadFisica">
+    <label>Usted indicó que el niño puede realizar actividades físicas</label>
+  </div>
+  <div class="container-confirmation" *ngIf="child.autBano">
+    <label>Usted autoriza que el niño puede ir al baño solo</label>
+  </div>
+  <div class="container-confirmation" *ngIf="child.autPinturas">
+    <label>Usted autoriza que el niño use pinturas artísticas</label>
+  </div>
+  <div class="container-confirmation" *ngIf="child.terminosCondiciones">
+    <label>Usted aceptó los términos y condiciones</label>
+  </div>
+</div>
+<div mat-dialog-actions class="action-buttons">
+  <button mat-raised-button [mat-dialog-close]="'cancel'">Cancelar</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="'save'">Registrar</button>
+</div>

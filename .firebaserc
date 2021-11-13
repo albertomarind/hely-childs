@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hely-childs": {
+      "hosting": {
+        "hely-childs": [
+          "hely-childs"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hely-childs"
+  }
+}
