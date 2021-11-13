@@ -1,0 +1,64 @@
+<form class="add-form" [formGroup]="form">
+  <div class="add-form__img">
+    <img src="../../assets/logo.png">
+  </div>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Nombre completo del niño</mat-label>
+    <input matInput formControlName="nombreNino">
+    <mat-error *ngIf="f['nombreNino'].invalid">Campo requerido</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Edad del niño</mat-label>
+    <input matInput formControlName="edadNino">
+    <mat-error *ngIf="f['edadNino'].invalid">Campo requerido</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Nombre del padre y/o tutor</mat-label>
+    <input matInput formControlName="nombrePadreTutor">
+    <mat-error *ngIf="f['nombrePadreTutor'].invalid">Campo requerido</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Teléfono de contacto</mat-label>
+    <input matInput formControlName="telefonoPadreTutor">
+    <mat-error *ngIf="f['telefonoPadreTutor'].invalid">Campo requerido</mat-error>
+  </mat-form-field>
+  <section class="add-form__checks">
+    <p>
+      <mat-checkbox color="primary" formControlName="padAlergiaEnfermedad">¿El niño padece alguna alergia o enfermedad?
+      </mat-checkbox>
+    </p>
+    <mat-form-field appearance="fill" class="w-100" *ngIf="f['padAlergiaEnfermedad'].value">
+      <mat-label>Especifique alergias/enfermedades del niño</mat-label>
+      <textarea matInput formControlName="descAlergiaEnfermedad"></textarea>
+    </mat-form-field>
+
+    <p>
+      <mat-checkbox color="primary" formControlName="autActividadFisica">¿El niño puede realizar actividad física?
+      </mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox color="primary" formControlName="autBano">¿Autorizo al niño ir al baño solo?</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox color="primary" formControlName="autMaquillaje">¿El niño puede colocarse maquillaje?</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox color="primary" formControlName="autPinturas">¿Autorizo que el niño use pinturas artísticas?
+      </mat-checkbox>
+    </p>
+  </section>
+  <section class="add-form__terms">
+
+    <mat-checkbox color="primary" formControlName="terminosCondiciones">
+    </mat-checkbox>
+    <label (click)="openDialog()">Aceptar términos y condiciones</label>
+
+  </section>
+
+  <div class="add-form__btn-action">
+    <button mat-raised-button class="add-form__btn-cancel" (click)="resetForm()">Cancelar</button>
+    <button mat-raised-button color="primary" class="add-form__btn-save" (click)="save()"
+      [disabled]="!form.valid || !f['terminosCondiciones'].value">Registrar</button>
+  </div>
+
+</form>

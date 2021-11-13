@@ -1,0 +1,71 @@
+:host {
+  background-color: #ad81b4;
+  display: block;
+  // border-top: 10px solid #ad81b4;
+  padding: 2rem;
+
+
+
+
+}
+
+.add-form {
+  border-radius: 1rem;
+
+  &__img {
+    text-align: center;
+
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 250px;
+      display: inline-block;
+
+    }
+  }
+
+
+  background-color: white;
+  border-top: 1rem solid #57355c;
+  padding:1.5rem;
+
+  &__btn-cancel {
+    flex-grow: 1;
+    margin-right: .5rem;
+  }
+
+  &__btn-save {
+    flex-grow: 1;
+    margin-left: .5rem;
+  }
+
+  &__btn-action {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__terms {
+    margin-top: 1.5rem;
+    text-decoration: underline;
+    font-weight: 700;
+    text-align: center;
+
+    label {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+  }
+  &__checks{
+    margin-top:.5rem;
+  }
+}
+
+
+
+::ng-deep {
+  .mat-checkbox-label {
+    margin-left: .5rem;
+  }
+}
