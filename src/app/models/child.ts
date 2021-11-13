@@ -11,4 +11,5 @@ export interface Child {
   descAlergiaEnfermedad?: string;
   terminosCondiciones: boolean;
   observaciones?: string;
+  [key: string]: any;
 }

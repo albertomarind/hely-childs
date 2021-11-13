@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Confirmación de eliminación</h1>
+<div mat-dialog-content>
+  <p>¿Está seguro que desea eliminar el registro con los siguientes datos?</p>
+  <div class="container-confirmation">
+    <label>Niño:</label> <span>{{child.nombreNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Edad:</label> <span>{{child.edadNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Padre o tutor:</label> <span>{{child.nombrePadreTutor}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Teléfono:</label><span> {{child.telefonoPadreTutor}}</span>
+  </div>
+</div>
+<div mat-dialog-actions class="action-buttons">
+  <button mat-raised-button [mat-dialog-close]="'cancel'">Cancelar</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="'delete'">Eliminar</button>
+</div>

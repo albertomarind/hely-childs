@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Confirmación de registro</h1>
+<div mat-dialog-content>
+  <div class="container-confirmation">
+    <label>Niño:</label> <span>{{child.nombreNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Edad:</label> <span>{{child.edadNino}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Padre o tutor:</label> <span>{{child.nombrePadreTutor}}</span>
+  </div>
+  <div class="container-confirmation">
+    <label>Teléfono:</label><span> {{child.telefonoPadreTutor}}</span>
+  </div>
+  <mat-form-field class="example-form-field" appearance="fill" class="w-100">
+    <mat-label>Observaciones</mat-label>
+    <textarea matInput type="text" [(ngModel)]="value"></textarea>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions class="action-buttons">
+  <button mat-raised-button [mat-dialog-close]="{update:false}">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="update()">Actualizar</button>
+</div>

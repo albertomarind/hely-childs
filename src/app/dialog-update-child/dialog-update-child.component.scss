@@ -1,0 +1,25 @@
+label {
+  font-weight: 500;
+}
+
+label+span , .resalta{
+  display: block;
+  font-weight: 650;
+}
+
+.container-confirmation {
+  border: 2px solid #cbb5ce;
+  padding: 0.25rem 0.75rem;
+  margin: .5rem 0;
+  border-left: 7px solid #cbb5ce;
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex-grow: 1;
+  }
+}

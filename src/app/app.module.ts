@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddChildComponent } from './add-child/add-child.component';
@@ -30,7 +30,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import { LoaderComponent } from './loader/loader.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { DialogMessageComponent } from './dialog-message/dialog-message.component';
-
+import { AdminRegistroComponent } from './admin-registro/admin-registro.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { DialogConfirmationDeleteChildComponent } from './dialog-confirmation-delete-child/dialog-confirmation-delete-child.component';
+import { DialogUpdateChildComponent } from './dialog-update-child/dialog-update-child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,10 @@ import { DialogMessageComponent } from './dialog-message/dialog-message.componen
     DialogTermsAndConditionsComponent,
     DialogConfirmationSaveChildComponent,
     LoaderComponent,
-    DialogMessageComponent
+    DialogMessageComponent,
+    AdminRegistroComponent,
+    DialogConfirmationDeleteChildComponent,
+    DialogUpdateChildComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +55,7 @@ import { DialogMessageComponent } from './dialog-message/dialog-message.componen
     // provideFirestore(() => getFirestore()),
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -54,16 +63,10 @@ import { DialogMessageComponent } from './dialog-message/dialog-message.componen
     MatCheckboxModule,
     MatDialogModule,
     MatDividerModule,
-    MatProgressSpinnerModule
-    // provideAnalytics(() => getAnalytics()),
-    // provideAuth(() => getAuth()),
-    // provideDatabase(() => getDatabase()),
-
-    // provideFunctions(() => getFunctions()),
-    // provideMessaging(() => getMessaging()),
-    // providePerformance(() => getPerformance()),
-    // provideRemoteConfig(() => getRemoteConfig()),
-    // provideStorage(() => getStorage())
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatIconModule,
+    MatPaginatorModule
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
