@@ -4,12 +4,12 @@
     <img src="../../assets/logo.png">
   </div>
   <mat-form-field appearance="fill" class="w-100">
-    <mat-label>Nombre completo del niño</mat-label>
+    <mat-label>Nombre completo del niño/niña</mat-label>
     <input matInput formControlName="nombreNino">
     <mat-error *ngIf="f['nombreNino'].invalid">Campo requerido</mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" class="w-100">
-    <mat-label>Edad del niño</mat-label>
+    <mat-label>Edad del niño/niña</mat-label>
     <input matInput formControlName="edadNino">
     <mat-error *ngIf="f['edadNino'].invalid">Campo requerido</mat-error>
   </mat-form-field>
@@ -25,27 +25,27 @@
   </mat-form-field>
   <section class="add-form__checks">
     <p>
-      <mat-checkbox color="primary" (change)="eventChange($event)" formControlName="padAlergiaEnfermedad">¿El niño
+      <mat-checkbox color="primary" (change)="eventChange($event)" formControlName="padAlergiaEnfermedad">¿El niño/niña
         padece alguna alergia o enfermedad?
       </mat-checkbox>
     </p>
     <mat-form-field appearance="fill" class="w-100" *ngIf="f['padAlergiaEnfermedad'].value">
-      <mat-label>Especifique alergias/enfermedades del niño</mat-label>
+      <mat-label>Especifique alergias/enfermedades del niño/niña</mat-label>
       <textarea matInput formControlName="descAlergiaEnfermedad"></textarea>
       <mat-error *ngIf="f['descAlergiaEnfermedad'].invalid">Campo requerido</mat-error>
     </mat-form-field>
     <p>
-      <mat-checkbox color="primary" formControlName="autActividadFisica">¿El niño puede realizar actividad física?
+      <mat-checkbox color="primary" formControlName="autActividadFisica">¿El niño/niña puede realizar actividad física?
       </mat-checkbox>
     </p>
     <p>
-      <mat-checkbox color="primary" formControlName="autBano">¿Autorizo al niño ir al baño solo?</mat-checkbox>
+      <mat-checkbox color="primary" formControlName="autBano">¿Autorizo al niño/niña ir al baño solo?</mat-checkbox>
     </p>
     <p>
-      <mat-checkbox color="primary" formControlName="autMaquillaje">¿El niño puede colocarse maquillaje?</mat-checkbox>
+      <mat-checkbox color="primary" formControlName="autMaquillaje">¿El niño/niña puede colocarse maquillaje?</mat-checkbox>
     </p>
     <p>
-      <mat-checkbox color="primary" formControlName="autPinturas">¿Autorizo que el niño use pinturas artísticas?
+      <mat-checkbox color="primary" formControlName="autPinturas">¿Autorizo que el niño/niña use pinturas artísticas?
       </mat-checkbox>
     </p>
   </section>

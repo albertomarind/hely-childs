@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Confirmación de registro</h1>
 <div mat-dialog-content>
   <div class="container-confirmation">
-    <label>Niño:</label> <span>{{child.nombreNino}}</span>
+    <label>Niño/Niña:</label> <span>{{child.nombreNino}}</span>
   </div>
   <div class="container-confirmation">
     <label>Edad:</label> <span>{{child.edadNino}}</span>
@@ -15,7 +15,7 @@
   <ng-container *ngIf="child.padAlergiaEnfermedad">
     <div class="container-confirmation">
       <div>
-        <label>Usted indicó que el niño padece alguna enfermedad o alergia y escribió la siguiente descripción:</label>
+        <label>Usted indicó que el niño/niña padece alguna enfermedad o alergia y escribió la siguiente descripción:</label>
       </div>
       <div>
         <span class="resalta">
@@ -25,13 +25,13 @@
     </div>
   </ng-container>
   <div class="container-confirmation" *ngIf="child.autActividadFisica">
-    <label>Usted indicó que el niño puede realizar actividades físicas</label>
+    <label>Usted indicó que el niño/niña puede realizar actividades físicas</label>
   </div>
   <div class="container-confirmation" *ngIf="child.autBano">
-    <label>Usted autoriza que el niño puede ir al baño solo</label>
+    <label>Usted autoriza que el niño/niña puede ir al baño solo</label>
   </div>
   <div class="container-confirmation" *ngIf="child.autPinturas">
-    <label>Usted autoriza que el niño use pinturas artísticas</label>
+    <label>Usted autoriza que el niño/niña use pinturas artísticas</label>
   </div>
   <div class="container-confirmation" *ngIf="child.terminosCondiciones">
     <label>Usted aceptó los términos y condiciones</label>
