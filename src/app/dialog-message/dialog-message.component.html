@@ -1,6 +1,20 @@
-<h1 mat-dialog-title>Mensaje</h1>
+<!-- <h1 mat-dialog-title>Mensaje</h1> -->
 <div mat-dialog-content>
-  {{status?'El niño/niña se ha registrado! :)':'Ups!, Ocurrió un error :('}}
+  <div class="wrapper-content">
+    <div class="wrapper-img">
+      <img src="../../assets/logo.png" width="200">
+    </div>
+    <div class="wrapper-palomita" *ngIf="status">
+      <img src="../../assets/palomita.png">
+    </div>
+    <div class="wrapper-tache" *ngIf="!status">
+      <img src="../../assets/tache.png">
+    </div>
+    <div class="wrapper-text">
+      {{status?'Registro Completado Exitosamente':'Ups!, Ocurrió un error :('}}
+    </div>
+  </div>
+
 </div>
 <div mat-dialog-actions class="action-buttons">
   <button mat-raised-button mat-dialog-close>Cerrar</button>

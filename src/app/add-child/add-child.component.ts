@@ -69,7 +69,7 @@ export class AddChildComponent implements OnInit {
         this.showLoader = true;
         this.childService.save(this.getChild())
           .then(r => {
-            console.log(r);
+            // console.log(r);
             this.showMessageDialog(Status.Success);
             this.resetForm();
           })

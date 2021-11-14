@@ -3,3 +3,34 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.wrapper-image {
+  max-width: 100%;
+
+}
+
+img {
+  max-width: 100%;
+  width: 33%;
+  height: auto;
+}
+
+.wrapper-text {
+  font-size: 1.6rem;
+  line-height: normal;
+  text-align: center;
+  margin: 1rem;
+  color: rgb(117 88 122);
+}
+
+.wrapper-palomita,.wrapper-tache {
+  display: flex;
+  justify-content: center;
+
+}
+
+.wrapper-img {
+  display: flex;
+  justify-content: center;
+}

@@ -55,8 +55,12 @@
                 </div>
               </div>
               <div class="contenedor-obs">
-                <label>Descripcion de alergia o enfermedad:</label><span>{{element.descAlergiaEnfermedad}}</span>
-                <label>Observaciones:</label><span>{{element.observaciones}}</span>
+                <ng-container *ngIf="element.descAlergiaEnfermedad!==''">
+                  <label>Descripcion de alergia o enfermedad:</label><span>{{element.descAlergiaEnfermedad}}</span>
+                </ng-container>
+                <ng-container *ngIf="element.observaciones!==''">
+                  <label>Observaciones:</label><span>{{element.observaciones}}</span>
+                </ng-container>
               </div>
             </div>
           </div>
