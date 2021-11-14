@@ -1,5 +1,5 @@
 :host {
-  background-color: #ad81b4;
+  // background-color: #ad81b4;
   display: block;
   padding: .5rem;
 }
@@ -8,12 +8,49 @@
   border-radius: 1rem;
 
   background-color: white;
-  border-top: 1rem solid #57355c;
-  padding: .35rem;
+  // border-top: 1rem solid #57355c;
+  // padding: .35rem;
+}
+
+.table-wrapper{
+  background-color: #8f3b9c;
+  padding: 0.25rem;
+  border-radius: 6px;
+  &>label{
+    color:white;
+    font-weight: 500;
+    padding:.5rem;
+    display:inline-block;
+  }
+  table{
+    border-radius: 4px;
+  }
+}
+
+.contenedor-datos{
+  display: flex;
+  &>div{
+    flex-grow: 1;
+  }
+}
+
+// .contenedor-acciones{
+//   display:flex;
+//   align-items: center;
+//   width: 100%;
+// }
+
+.mat-cell span{
+  display:inline-block;
+  padding-left: 5px;
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  border:1px solid #d3dbe1;
+
 }
 
 th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type{
-  padding:0 !important;
+  padding:0rem !important;
   width: 150px !important;
 }
 th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type{
@@ -22,6 +59,9 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
 
 th.mat-header-cell{
   text-align: center !important;
+  background-color: #e3e9ee;
+  font-weight: 700;
+
 }
 
 table {
@@ -64,8 +104,9 @@ tr.example-element-row:not(.example-expanded-row):active {
   line-height: normal;
 }
 
-.example-element-description {
+.example-element-description .contenedor-datos{
   padding: 16px;
+  padding-bottom: 0;
 
   label {
     display: block;
@@ -78,11 +119,42 @@ tr.example-element-row:not(.example-expanded-row):active {
   }
 }
 
+.contenedor-obs{
+  padding: 16px;
+  padding-top:0;
+
+  label {
+    display: block;
+    font-weight: 600;
+  }
+
+  span {
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
+
+.contenedor-acciones{
+  display:flex;
+  flex-direction: column;
+
+}
+
+.contenedor-botones-acciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .example-element-description-attribution {
   opacity: 0.5;
 }
 
 ::ng-deep{
+  tr.mat-row{
+    cursor: pointer;
+  }
+
   th{
     width: 40px !important;
   }
